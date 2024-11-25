@@ -1,0 +1,69 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<div id="carouseldemo" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+  <div class="carousel-indicators">
+    <button data-bs-target="#carouseldemo" data-bs-slide-to="0" class="active"></button>
+    <button data-bs-target="#carouseldemo" data-bs-slide-to="1" class="active"></button>
+    <button data-bs-target="#carouseldemo" data-bs-slide-to="2" class="active"></button>
+    <button data-bs-target="#carouseldemo" data-bs-slide-to="3" class="active"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="w-100" src="{% static 'images/image1.jpg' %} " width='100%' height="640px" alt="First slide">
+      <div class="carousel-caption">
+        <h2>The Moonlight Resart</h2>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <img class="w-100" src="{% static 'images/image2.jpg' %}" width='100%' height="640px" alt="Second slide">
+    </div>
+    <div class="carousel-item active">
+      <img class="w-100" src="{% static 'images/image3.jpg' %}" width='100%' height="640px" alt="Third slide">
+    </div>
+    <div class="carousel-item active">
+      <img class="w-100" src="{% static 'images/image4.jpg' %}"  width='100%' height="640px"alt="Third slide">
+    </div>
+  </div>
+  <button class="carousel-control-prev" data-bs-target="#carouseldemo" type="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </button>
+  <button class="carousel-control-next" data-bs-target="#carouseldemo" type="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </button>
+</div>
+
+<div class="row justify-content-center text-white">
+  <div class="container col-md-5 p-3 m-3">
+    <br><hr><h1>THE MOON LIGHT IS NOT JUST ANY HOTEL, IT IS AN EXPERIENCE</h1><hr><br>
+  </div>
+  <div class="container col-md-5 p-3 m-3 ">
+    <p><h3 class="text-center"></h3><strong>MOON LIGHT HOTELS, CHENNAI, INDIA</strong></h3><br>
+                At The Moonlight Hotels, we understand the essence of personalised service, which helps us 
+                take care of you in all ways possible. We believe in finding the right balance between style, comfort, service and happiness. Because for us,
+                everything matters.<br><br>Enjoy smartly designed rooms and suites or host an event in flexible
+                meeting and event spaces, get energised in our fitness centre or lounge by the rooftop pool.<br></p>
+  </div>
+</div>
+<div class="d-flex justify-content-center text-white m-3">
+<div class="container row ">
+    <div class="container col-4">
+      <a class="" href="{% url 'home'%}"><img  src="{% static 'images/gallery.jpeg'%}" height="300px" width="300px"></a>
+      <h5 class=" text-white m-2">Miracle Happens!</h5>
+      <p class=" text-white m-2">Home</p>
+    </div>
+    <div class="container col-4">
+      <a class="" href="{% url 'branch1'%}"><img  src="{% static 'images/branch1.jpg'%}" height="300px" width="300px"></a>
+      <h5 class="m-2 text-white">The Boutique Hotel!</h5>
+      <p class="m-2 text-white">St Mary's Road</p>
+    </div>
+    <div class="container col-4">
+      <a class="" href="{% url 'branch2'%}"><img  src="{% static 'images/branch2.jpg'%}" height="300px" width="300px"></a>
+      <h5 class="m-2 text-white">The big Business hotel!</h5>
+      <p class="m-2  text-white">Annasalai</p>
+    </div>
+</div>
+</div>
+{% endblock %}

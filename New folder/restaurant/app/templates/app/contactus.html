@@ -1,0 +1,33 @@
+{% extends 'sub.html' %}
+{% block title %} contactus {% endblock %}
+{% load static %}
+{% block content %}
+<div>
+    <img class="w-100" src="{% static 'images/contact.jpg' %} " width='100%' height="640px" alt="First slide">
+</div>
+<div class="nav justify-content-center "  id="contact">
+    <div class="container col-sm-5 p-3 m-3 text-white">
+        
+        <hr>
+        <h1>We’ll always be eagerly waiting to talk with you</h1>
+        <hr>    
+    </div>
+    <div class="container col-sm-5 p-3 m-3 text-white">
+        <p style="text-align:justify;"><br>Experience exceptional service in the comforts of our well-designed, eco-friendly hotels in the heart of Chennai, India. Our two award-winning hotels in Chennai feature sleek, cotemporary rooms and suites, relaxing spa services, vibrant dining and nightlife, meeting space and business centers. Call, email or fax The Raintree Hotels to make reservations, plan an event or learn more about our hotels.</p>
+    </div>
+</div>
+<div class="nav justify-content-center">
+    <div class="col-xs-9 text-center">
+        <h2 class="container-fluid text-white f5"><strong>Details of The Moonlight Hotels</strong></h2>
+        <div class="container-fluid  border border-light border-3 m-3 p-4 rounded-3 bg-light" style="width: 700px ; color: black;text-align: left;">
+            <h3>The Moonlight, St Mary's Road</h3>
+            <p>120, St Mary's Road, Alwarpet, Chennai, Tamil Nadu - 600018</p>
+            <p><span>Phone -</span><strong>+91 44 2430 4050 / 4225 2525</strong> <span>|</span>Fax -&nbsp;<strong>+91 44 4225 2627</strong></p>
+            <p><span>Email -&nbsp;</span><a href="mailto:mail@moonlighthotels.com" >mail@moonlighthotels.com</a></p>
+            <p><span>Room Reservation -&nbsp;</span>
+                <a href="mailto:reservations@moonlighthotels.com" >reservations@moonlighthotels.com</a></p>
+        </div>
+   </div>
+</div>
+
+{% endblock %}

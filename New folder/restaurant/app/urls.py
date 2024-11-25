@@ -1,0 +1,45 @@
+from django.urls import path
+from . import views
+from .views import BookingListView, RoomDetailView, CancelBookingView,CheckoutView
+urlpatterns = [
+    path('',views.home,name='home'),
+    path('every/',views.every,name='every'),
+    path('gallery/',views.gallery,name='gallery'),
+    path('awards/',views.awards,name='awards'),
+    path('contact/',views.contact,name='contact'),
+    path('carrer/',views.carrer,name='carrer'),
+    path('branch1/',views.branch1,name='branch1'),
+    path('branch2/',views.branch2,name='branch2'),
+    path('service/',views.service,name='service'),
+    path('dinning/',views.dinning,name='dinning'),
+    path('location/',views.location,name='location'),
+    path('contactus/',views.contactus,name='contactus'),
+    path('contactus1/',views.contactus1,name='contactus1'),
+    path('events/',views.events,name='events'),
+    path('meeting/',views.meeting,name='meeting'),
+    path('reserve/',views.reserve,name='reserve'),
+    path("roomlist/",views.roomlist,name='RoomListView'),
+    path('room/<str:category>', RoomDetailView.as_view(), name='RoomDetailView'),
+    path('booking_list/', BookingListView.as_view(), name='BookingListView'),
+    path('booking/cancel/<pk>', CancelBookingView.as_view(),name='CancelBookingView'),
+    path('checkout/', CheckoutView.as_view(), name='CheckoutView'),
+    path('success/', views.success_view, name='success_view'),
+    path('cancel/', views.cancel_view, name='cancel_view'),
+    # path('room/', views.available_rooms, name='available_rooms'),
+    # path('book/<int:room_id>/', views.book_room, name='book_room'),
+    # # path('booking_confirmation/<int:booking_id>/', views.booking_confirmation, name='booking_confirmation'),
+    # path('rooms/', views.room_list, name='room_list'),
+    # path('party-halls/', views.party_hall_list, name='party_hall_list'),
+    # path('book/', views.book_room_or_party_hall, name='book_room_or_party_hall'),
+    # path('payment/<int:booking_id>/', views.payment, name='payment'),
+    # path('confirmation/<int:booking_id>/', views.booking_confirmation, name='confirmation'),
+    # path('book/', BookingFormView.as_view(), name='BookingFormView'),
+   
+    # path('payment/',views.payment,name='payment')
+    # path('index/', views.index, name='index'),
+    # path('signin/', views.signin, name='signin'),
+    # path('signup/', views.signup, name='signup'),
+    # path('signout/', views.signout, name='signout'),
+    # path('hotel/<uid>',views.get_hotel,name='get_hotel'),
+]
+

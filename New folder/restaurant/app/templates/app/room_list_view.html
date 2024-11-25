@@ -1,0 +1,79 @@
+{% extends 'sub1.html' %}
+{% load static %}
+{% block extra_head %}
+><style>
+.bookings{
+    margin-top: 2rem;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
+.booking{
+    flex:1;
+    max-width:20vw;
+    min-width: 20rem;
+    text-align: left;
+    border: 1px solid #dbdbdb;
+    padding:1rem;
+    border-radius: 0.75rem;
+    margin:1rem;
+    background-color: white;
+}
+.booking:hover{
+    cursor: pointer;
+
+}
+a i{
+    margin: 1rem;
+    color:rgb(236, 235, 228);
+    text-decoration: none;
+}
+
+.booking a i{
+    font-size: 1.1rem;
+    visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+</style>
+{% endblock %}
+{% block content %}
+<div>
+    <img class="w-100" src="{% static 'images/image4.jpg' %} " width='100%' height="640px" alt="First slide">
+</div>
+<div class="row justify-content-center text-white">
+    <div class="container col-md-3 p-3 m-3 ">
+        <br><hr>
+        <h1>WHEN YOU ARE WITH US, BE IN YOUR COMFORT ZONE</h1><p></p>
+        <hr>
+    </div>
+    <br>
+    <div class="container col-md-8 p-3 m-3 right-box text-white">
+        <p style="text-align: justify;"><br> <br> Featuring 108 contemporary guestrooms and suites, the hotel's topmost priority is the guest's comfort and maintaining the highest quality standard in hospitality.<br> While making the guest feel at ease and well looked after, our friendly staff and excellent room facilities like the flat-screen HDTV, free Wi-Fi, ipod docks, and round-the-clock room service, make sure that the stay is memorable. You'll be reassured to find that the use of eco-friendly materials is complemented by cutting-edge technology so that your luxury is truly sustainable. <br>From recycled paper and a 'no plastic' effort, we care about every detail when you choose us as a stay in Chennai because every small thing matters.</p><p></p>
+        <br>
+    </div>
+</div>
+<div class="container bookings">
+    {% for room_category, room_url in room_list %}
+    <div class="container row booking ">
+        <div class="text-center">
+            <img src="{%static 'images/r2.jpg'%}">
+        </div>
+        <div class="text-center">
+            <h3>{{room_category}}</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nulla</p>
+            <div><span class="txt-wdgt-btn-wrapper" style="text-align: left;"><a class="btn txt-wdgt-btn btn-default pull-left" href="{{room_url}}">
+                <span class="text bg-dark p-2 m-2 d-flex justify-content-center text-white">Book Now</span></a>
+                </span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

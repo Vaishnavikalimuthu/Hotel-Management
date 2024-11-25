@@ -1,0 +1,47 @@
+{% extends 'sub1.html' %}
+{% block title %} Branch2 {% endblock %}
+{% load static %}
+{% block content %}
+<div id="carouseldemo" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+    <div class="carousel-indicators">
+      <button data-bs-target="#carouseldemo" data-bs-slide-to="0" class="active"></button>
+      <button data-bs-target="#carouseldemo" data-bs-slide-to="1" class="active"></button>
+      <button data-bs-target="#carouseldemo" data-bs-slide-to="2" class="active"></button>
+      <button data-bs-target="#carouseldemo" data-bs-slide-to="3" class="active"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="w-100" src="{% static 'images/branch1.jpg' %} " width='100%' height="640px" alt="First slide">
+      </div>
+      <div class="carousel-item active">
+        <img class="w-100" src="{% static 'images/branch2.jpg' %}" width='100%' height="640px" alt="Second slide">
+      </div>
+      <div class="carousel-item active">
+        <img class="w-100" src="{% static 'images/career1.jpg' %}" width='100%' height="640px" alt="Third slide">
+      </div>
+      <div class="carousel-item active">
+        <img class="w-100" src="{% static 'images/career2.jpg' %}"  width='100%' height="640px"alt="Third slide">
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" data-bs-target="#carouseldemo" type="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </button>
+    <button class="carousel-control-next" data-bs-target="#carouseldemo" type="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </button>
+  </div>
+
+<div class="row justify-content-center text-white">
+    <div class="container col-md-3 p-3 m-3 ">
+        <br><hr>
+        <h1 class="text-white">THE WARM BOUTIQUE HOTEL, ON A QUIET GREEN AVENUE</h1><p></p>
+        <hr><br>
+    </div>
+    <div class="container col-md-8 p-3 m-3 right-box text-white">
+        <p class="text-white" style="text-align: justify;"><br> <br> A friendly hotel in Chennai that welcomes you with its modern decor, luxurious setting and attentive service. Whether you're with us for business or pleasure, we take care of all your needs and desires. Under a lush green canopy of the rain tree, feel like you are nestled in nature, yet being, well within the prime location of the city.<br> <br> We want you to feel at home in our plush rooms and suites, relax in our outdoor pool overlooking the city, and truly savour Indian and international cuisine at our restaurants, Colony, Chap Chay and the rooftop lounge, above sea level. The Moonlight, St. Mary's Road also features dynamic meeting and event spaces that include three banquet halls and a business centre with state-of-the-art technology to look after your every business need.</p><p></p>
+    </div>
+</div>
+{% endblock %}
